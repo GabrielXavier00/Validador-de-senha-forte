@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validador de Senha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+    <h1>Verifique e Melhore sua Senha</h1>
+    <p>Sua senha é vulnerável? Descubra agora e crie uma chave de segurança imbatível em tempo recorde!</p>
+  </div>
+
+  <div class="input">
+    <input type="password" placeholder="Digite sua senha" id="password">
+    <img src="assets/eye-close.png" alt="" id="eyeicon">
+  </div>
+
+  <div class="rules">
+    <div class="progress-bar">
+      <div class="indicator" style="width: 0%;"></div>
+    </div>
+
+    <div class="rules__checkboxes">
+      <div class="rules__checkbox">
+        <input type="checkbox" class="rules__checkbox-input" id="digits" disabled>
+        <label for="digits">Contém dígitos</label>
+      </div>
+
+      <div class="rules__checkbox">
+        <input type="checkbox" class="rules__checkbox-input" id="lenghtPassword" disabled>
+        <label for="digits">Tem comprimento minimo de 8 caracteres</label>
+      </div>
+
+      <div class="rules__checkbox">
+        <input type="checkbox" class="rules__checkbox-input" id="symbols" disabled>
+        <label for="symbols">Contém símbolos especiais</label>
+      </div>
+
+      <div class="rules__checkbox">
+        <input type="checkbox" class="rules__checkbox-input" id="capital" disabled>
+        <label for="capital">Contém letras maiúsculas</label>
+      </div>
+
+      <div class="rules__checkbox">
+        <input type="checkbox" class="rules__checkbox-input" id="lower" disabled>
+        <label for="capital">Contém letras minúscula</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts no final do body, tipo módulo -->
+  <script type="module" src="validacoesSenha.js"></script>
+  <script type="module" src="dom.js"></script>
+  <script>
+    let eyeicon = document.getElementById('eyeicon')
+    let password = document.getElementById('password')
+
+    eyeicon.onclick = () => {
+      if(password.type === "password") {
+        password.type = 'text';
+        eyeicon.src = "./assets/eye-open.png"
+      } else {
+        password.type = "password"
+        eyeicon.src = "./assets/eye-close.png"
+      }
+    }
+  </script>
+</body>
+</html>
