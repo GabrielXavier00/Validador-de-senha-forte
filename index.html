@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="main">
-    <h1>Verifique e Melhore sua Senha</h1>
-    <p>Sua senha é vulnerável? Descubra agora e crie uma chave de segurança imbatível em tempo recorde!</p>
+  <div class="logo">
+    <img src="assets/INFO M 35.pdf.png" alt="Logo INFO M35" class="logo-inline">
   </div>
+  <h1>Verifique e Melhore sua Senha</h1>
+  <p>Sua senha é vulnerável? Descubra agora e crie uma chave de segurança imbatível em tempo recorde!</p>
 
   <div class="input">
     <input type="password" placeholder="Digite sua senha" id="password">
@@ -30,7 +31,7 @@
 
       <div class="rules__checkbox">
         <input type="checkbox" class="rules__checkbox-input" id="lenghtPassword" disabled>
-        <label for="digits">Tem comprimento minimo de 8 caracteres</label>
+        <label for="digits">Tem comprimento mínimo de 8 caracteres</label>
       </div>
 
       <div class="rules__checkbox">
@@ -45,12 +46,11 @@
 
       <div class="rules__checkbox">
         <input type="checkbox" class="rules__checkbox-input" id="lower" disabled>
-        <label for="capital">Contém letras minúscula</label>
+        <label for="capital">Contém letras minúsculas</label>
       </div>
     </div>
   </div>
 
- 
   <script type="module" src="validacoesSenha.js"></script>
   <script type="module" src="dom.js"></script>
   <script>
